@@ -1,0 +1,78 @@
+<style>
+  ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  </style>
+
+<ul>
+  <li><a  href="#home">DiceRoll</a></li>
+  
+</ul>
+
+
+<div class="jumbotron text-center">
+  <button class="btn btn-success btn-lg"  (click)="TirarDados()" [disabled]="this.button">Roll Dices</button>
+  <br>
+  <img  class="img"[src]="dadoIzquierda" alt="">
+  <img  class="img" [src]="dadoDerecha" alt="">
+  
+
+ 
+  <div  *ngIf="this.number1==this.number2">
+    <h1 ><span class="badge badge-success"> Ganaste</span></h1>
+  </div>
+<br>
+  <p type="button" class="btn btn-secondary m-4">
+    Rolls: <span class="badge badge-secondary">{{lanzamientos}}  </span>
+  </p>
+  <p type="button" class="btn btn-success m-4">
+    Wins: <span class="badge badge-success ">{{victorias}}  </span>
+  </p>
+  <p type="button" class="btn btn-info m-4">
+    Win Ratio: <span class="badge badge-">{{porcentajeVic}}%  </span>
+  </p>
+  
+</div>
+
+
+<div class="card text-center">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Angular Project #05</h5>
+    <p class="card-text">Interacting elements using logic to create animations of rolling dices with angular ver.11</p>
+    <a href="https://github.com/ebaldonedo" target="_blank" class="btn btn-primary">Visit my github</a>
+  </div>
+  <div class="card-footer text-muted">
+    NoyersLab
+  </div>
+</div>
